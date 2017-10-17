@@ -1,0 +1,16 @@
+.card {
+    margin-top: 20px;
+}
+
+.fa {
+    font-size: 60px;
+}
+
+.fa-arrow-left {
+    font-size: 30px;
+    color: #212529;
+}
+
+.navbar-toggler {
+    padding: 7.5px 15px;
+}
