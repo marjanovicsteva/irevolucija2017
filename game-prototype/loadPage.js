@@ -1,52 +1,63 @@
 /* global moment localStorage */
 
-var date = moment().date();
+var date = new Date().getDate();
+var today = parseInt(localStorage.lastTimeUpdated, 10);
 
+if (typeof(today) == "undefined") {
+    localStorage.setItem("lastTimeUpdated", 0);
+    localStorage.setItem("visited", 0);
+}
+else {
+    if (today == date) {
+        localStorage.setItem("visited", 1);
+    }
+    else {
+        localStorage.setItem("visited", 0);
+    }
+}
 window.onload = function() {
     if (typeof(Storage) != "undefined") {
         
-        var visited = localStorage.getItem("visited");
-
         switch (date) {
             case 22:
-                localStorage.clear();
-                localStorage.setItem("visited", visited);
+                
+                
                 window.location.href = "22/index.html";
                 break;
             
             case 23:
-                localStorage.clear();
-                localStorage.setItem("visited", visited);
+                
+                
                 window.location.href = "23/index.html";
                 break;
                 
             case 24:
-                localStorage.clear();
-                localStorage.setItem("visited", visited);
+                
+                
                 window.location.href = "24/index.html";
                 break;
                 
             case 25:
-                localStorage.clear();
-                localStorage.setItem("visited", visited);
+                
+                
                 window.location.href = "25/index.html";
                 break;
                 
             case 7:
-                localStorage.clear();
-                localStorage.setItem("visited", visited);
+                
+                
                 window.location.href = "23/index.html";
                 break;
                 
             case 8:
-                localStorage.clear();
-                localStorage.setItem("visited", visited);
+                
+                
                 window.location.href = "24/index.html";
                 break;
                 
             case 9:
-                localStorage.clear();
-                localStorage.setItem("visited", visited);
+                
+                
                 window.location.href = "25/index.html";
                 break;
                 

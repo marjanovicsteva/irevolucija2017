@@ -10,7 +10,9 @@ if (localStorage.visited == 1) {
         var maxQuestion = $(".card").length - 1;
     
         if (typeof(Storage) != "undefined") {
-            localStorage.setItem("ukupnoPoena", 0);
+            if (typeof(localStorage.ukupnoPoena) == "undefined") {
+                localStorage.setItem("ukupnoPoena", 0);
+            }
             var ukupnoPoena = parseInt(localStorage.getItem("ukupnoPoena"), 10);
             $(".btn").click(function() {
                 if (question >= 1 && question <= maxQuestion) {
@@ -23,7 +25,7 @@ if (localStorage.visited == 1) {
                         localStorage.setItem("ukupnoPoena", ukupnoPoena);
                     } else {
                         $(this).siblings(".btn").prop("disabled", true);
-                        $(this).siblings(".correct").addClass("btn-success");
+                        // $(this).siblings(".correct").addClass("btn-success");
                         $(this).prop("disabled", true);
                         $(this).addClass("btn-danger");
                     }
@@ -33,6 +35,8 @@ if (localStorage.visited == 1) {
                         var selector = "#q" + question;
                         $(selector).removeClass("hide");
                         if (question == maxQuestion + 1) {
+                            let today = new Date().getDate();
+                            localStorage.setItem("lastTimeUpdated", today);
                             localStorage.setItem("visited", 1);
                             $("#resultScore").removeClass("hide");
                             $("#score").text(score);
