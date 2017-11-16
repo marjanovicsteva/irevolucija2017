@@ -1,58 +1,56 @@
-function populate() {
-    if(quiz.isEnded()) {
-        showScores();
-    }
-    else {
-        // prikazuje pitanjce
-        var element = document.getElementById("question");
-        element.innerHTML = quiz.getQuestionIndex().text;
+/* global $ localStorage */
 
-        // options
-        var choices = quiz.getQuestionIndex().choices;
-        for(var i = 0; i < choices.length; i++) {
-            var element = document.getElementById("choice" + i);
-            element.innerHTML = choices[i];
-            guess("btn" + i, choices[i]);
+var question = 1;
+var score = 0;
+if (localStorage.visited == 1) {
+    alert("Vec ste igrali kviz danas.");
+    window.location.href = "../../index.html";
+} else {
+    $(document).ready(function() {
+        var maxQuestion = $(".card").length - 1;
+    
+        if (typeof(Storage) != "undefined") {
+            if (typeof(localStorage.ukupnoPoena) == "undefined") {
+                localStorage.setItem("ukupnoPoena", 0);
+            }
+            var ukupnoPoena = parseInt(localStorage.getItem("ukupnoPoena"), 10);
+            $(".btn").click(function() {
+                if (question >= 1 && question <= maxQuestion) {
+                    if ($(this).hasClass("correct")) {
+                        $(this).siblings(".btn").prop("disabled", true);
+                        $(this).prop("disabled", true);
+                        $(this).addClass("btn-success");
+                        score++;
+                        ukupnoPoena++;
+                        localStorage.setItem("ukupnoPoena", ukupnoPoena);
+                    } else {
+                        $(this).siblings(".btn").prop("disabled", true);
+                        // $(this).siblings(".correct").addClass("btn-success");
+                        $(this).prop("disabled", true);
+                        $(this).addClass("btn-danger");
+                    }
+                    $(this)
+                    question++;
+                    setTimeout(function () {
+                        $("#q" + (question - 1)).addClass("hide");
+                        var selector = "#q" + question;
+                        $(selector).removeClass("hide");
+                        if (question == maxQuestion + 1) {
+                            let today = new Date().getDate();
+                            localStorage.setItem("lastTimeUpdated", today);
+                            localStorage.setItem("visited", 1);
+                            $("#resultScore").removeClass("hide");
+                            $("#score").text(score);
+                            $("#ukupanScore").text(ukupnoPoena);
+                        }
+                    }, 1000);
+                }
+            });
+        } else {
+            alert("Local Storage not supported by your browser. Please update it.");
         }
-
-        showProgress();
-    }
-};
-
-function guess(id, guess) {
-    var button = document.getElementById(id);
-    button.onclick = function() {
-        quiz.guess(guess);
-        populate();
-    }
-};
+        
+    });
 
 
-function showProgress() {
-    var currentQuestionNumber = quiz.questionIndex + 1;
-    var element = document.getElementById("progress");
-    element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
-};
-
-function showScores() {
-    var gameOverHTML = "<h1>Result</h1>";
-    gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
-    var element = document.getElementById("quiz");
-    element.innerHTML = gameOverHTML;
-};
-
-// kreiranje pitanja, new Question("ovde ide pitanje", ["ovde idu odgovori pod znacima navoda odvojeni zarezom"], "odgovor"),
-var questions = [
-    new Question("Koliko je 2 + 2?", ["1", "2", "3", "4"], "3")
-];
-
-// 
-var quiz = new Quiz(questions);
-
-// display quiz
-populate();
-
-
-
-
-
+}

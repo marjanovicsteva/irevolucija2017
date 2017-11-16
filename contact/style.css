@@ -1,0 +1,21 @@
+.contactList ul {
+    list-style-type: none;
+}
+
+.btn-block {
+    margin-top: 10px;
+}
+
+.card {
+    margin-top: 20px;
+    border-color: red;
+}
+
+.text {
+    font-size: 22px;
+}
+
+h4 {
+    font-style: oblique;
+    font-size: 26px;
+}
