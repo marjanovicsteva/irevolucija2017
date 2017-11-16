@@ -1,0 +1,16 @@
+.logo {
+    display: block;
+    margin: auto;
+}
+
+.text {
+    text-align: center;
+}
+
+.card {
+    margin-top: 20px;
+    border-color: #f9ce09;
+}
+.btn-block {
+    margin-top: 15px;
+}
