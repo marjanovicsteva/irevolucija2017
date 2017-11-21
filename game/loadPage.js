@@ -71,6 +71,6 @@ window.onload = function() {
                 }
         }
     } else {
-        alert("Local Storage not supported by your browser. Please update it or otherwise the app might not function properly");
+        alert("Local Storage nije podržan od strane vašeg pretraživača, molimo vas da update vaš operativni sistem ili pretraživač inače aplikacija možda neće funkcionisati");
     }
 };
