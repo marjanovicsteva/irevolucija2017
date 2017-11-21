@@ -8,7 +8,7 @@ if (localStorage.visited == 1) {
 } else {
     $(document).ready(function() {
         var maxQuestion = $(".card").length - 1;
-    
+
         if (typeof(Storage) != "undefined") {
             if (typeof(localStorage.ukupnoPoena) == "undefined") {
                 localStorage.setItem("ukupnoPoena", 0);
@@ -29,7 +29,6 @@ if (localStorage.visited == 1) {
                         $(this).prop("disabled", true);
                         $(this).addClass("btn-danger");
                     }
-                    $(this)
                     question++;
                     setTimeout(function () {
                         $("#q" + (question - 1)).addClass("hide");
@@ -49,7 +48,7 @@ if (localStorage.visited == 1) {
         } else {
             alert("Local Storage not supported by your browser. Please update it.");
         }
-        
+
     });
 
 

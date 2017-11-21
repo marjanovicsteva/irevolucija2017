@@ -17,52 +17,46 @@ else {
 }
 window.onload = function() {
     if (typeof(Storage) != "undefined") {
-        
+
         switch (date) {
-            case 22:
-                
-                
-                window.location.href = "22/index.html";
-                break;
-            
             case 23:
-                
-                
+
+
                 window.location.href = "23/index.html";
                 break;
-                
+
             case 24:
-                
-                
+
+
                 window.location.href = "24/index.html";
                 break;
-                
+
             case 25:
-                
-                
+
+
                 window.location.href = "25/index.html";
                 break;
-                
+
             case 7:
-                
-                
+
+
                 window.location.href = "23/index.html";
                 break;
-                
+
             case 8:
-                
-                
+
+
                 window.location.href = "24/index.html";
                 break;
-                
+
             case 9:
-                
-                
+
+
                 window.location.href = "25/index.html";
                 break;
-                
+
             default:
-                if (date < 22) {
+                if (date < 23) {
                     window.location.href = "../index.html";
                     alert("Kviz je dostupan tek na pocetku konferencije.");
                 } else if (date > 25) {

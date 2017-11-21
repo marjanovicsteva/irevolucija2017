@@ -2,33 +2,33 @@
 <html>
     <head>
         <title>Quiz</title>
-        
+
         <script type="text/javascript" src="../../jquery.slim.min.js"></script>
         <script type="text/javascript" src="../../popper.js"></script>
         <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
-        
-        <link rel="stylesheet" href="../style.css" type="text/css" />
-        
-       
 
-        
+        <link rel="stylesheet" href="../style.css" type="text/css" />
+
+
+
+
         <script type="text/javascript" src="../moment.js"></script>
         <script type="text/javascript" src="../app.js"></script>
     </head>
-    
+
     <body>
         <nav class="navbar navbar-light bg-light">
             <!-- Slika u headeru -->
             <a class="navbar-brand" href="#">
                 <img src="../../logo.png" width="auto" height="50" alt="">
             </a>
-          
+
             <!-- Dugme koje spusta glavni meni -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <!-- Glavni meni (Nevidljiv dok se ne klikne dugme) -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav text-center">
@@ -52,7 +52,7 @@
         </nav>
 
         <p>&nbsp;</p>
-        
+
         <div class="container">
             <div id="q1">
                 <div class="card">
@@ -60,14 +60,14 @@
                         <h4 class="card-title text-center">iRevolucija Quiz</h4>
                         <div class="card-text">
                             <p id="pitanje">Koliko bitova ima u jednom bajtu</p>
-                            
+
                             <div class="buttons text-center">
                                 <button class="btn btn-block correct">8</button>
                                 <button class="btn btn-block">2</button>
                                 <button class="btn btn-block">64</button>
                                 <button class="btn btn-block">128</button>
                             </div>
-                            
+
                             <div class="text-right hide dalje">
                                 <p>&nbsp;</p>
                                 <button class="btn btn-danger">Dalje</button>
@@ -76,21 +76,21 @@
                     </div>
                 </div>
             </div>
-            
+
             <div id="q2" class="hide">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title text-center">iRevolucija Quiz</h4>
                         <div class="card-text">
-                            <p id="pitanje">Koja je društvena mreža prvo nastala</p>
-                            
+                            <p id="pitanje">Koja od slede&#263;ih dru&#353;tvenih mre&#382;a je prva nastala?</p>
+
                             <div class="buttons text-center">
                                 <button class="btn btn-block">Facebook</button>
                                 <button class="btn btn-block correct">LinkedIn</button>
                                 <button class="btn btn-block">Twitter</button>
                                 <button class="btn btn-block">mySpace</button>
                             </div>
-                            
+
                             <div class="text-right hide dalje">
                                 <p>&nbsp;</p>
                                 <button class="btn btn-danger">Dalje</button>
@@ -99,21 +99,21 @@
                     </div>
                 </div>
             </div>
-            
+
             <div id="q3" class="hide">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title text-center">iRevolucija Quiz</h4>
                         <div class="card-text">
-                            <p id="pitanje">Kako se zove CEO Nordeusa</p>
-                            
+                            <p id="pitanje">Kako se zove CEO Nordeusa?</p>
+
                             <div class="buttons text-center">
-                                <button class="btn btn-block">Milan Perović</button>
-                                <button class="btn btn-block">Stevan Marjanović</button>
-                                <button class="btn btn-block correct">Branko Milutinović</button>
-                                <button class="btn btn-block">Vladimir Radosavljević</button>
+                                <button class="btn btn-block">Milan Perovi&#263;</button>
+                                <button class="btn btn-block">Stevan Marjanovi&#263;</button>
+                                <button class="btn btn-block correct">Branko Milutinovi&#263;</button>
+                                <button class="btn btn-block">Vladimir Radosavljevi&#263;</button>
                             </div>
-                            
+
                             <div class="text-right hide dalje">
                                 <p>&nbsp;</p>
                                 <button class="btn btn-danger">Dalje</button>
@@ -122,14 +122,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <div id="resultScore" class="hide">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title text-center">iRevolucija Quiz</h4>
-                        <p>Vas danasnji rezultat: <span id="score"></span></p>
-                        <p>Vas ukupni rezultat: <span id="ukupanScore"></span></p>
-                        <a href="../../index.html" class="btn btn-danger btn-block">Pocetni Ekran</a>
+                        <p>Va&#353; dana&#353;nji rezultat: <span id="score"></span></p>
+                        <p>Va&#353; ukupan rezultat: <span id="ukupanScore"></span></p>
+                        <a href="../../index.html" class="btn btn-danger btn-block">Po&#269;etni ekran</a>
                     </div>
                 </div>
             </div>
