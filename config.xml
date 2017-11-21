@@ -23,7 +23,7 @@
   <preference name="fullscreen"                 value="true" />           <!-- da app bude u full screenu tako sto ce sakriti status bar -->
   <preference name="stay-in-webview"            value="false" />          <!-- kada je false svaki externi link ce biti otvoren u default browseru, ako je true bice otvoren u browseru aplikacije -->
   <preference name="android-installLocation"    value="auto" />           <!-- ovo je za instalaciju za android (integrisana memorija ili SD kartica) -->
-
+<platform name ="android">
 <icon src="android/mipmap-ldpi/ic_launcher.png" platform="android" qualifier="ldpi" />
 <icon src="android/mipmap-mdpi/ic_launcher.png" platform="android" qualifier="mdpi" />
 <icon src="android/mipmap-hdpi/ic_launcher.png" platform="android" qualifier="hdpi" />
