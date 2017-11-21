@@ -19,11 +19,12 @@ window.onload = function() {
     if (typeof(Storage) != "undefined") {
         
         switch (date) {
-            case 22:
+          /*  case 22:
                 
                 
                 window.location.href = "22/index.html";
                 break;
+                */
             
             case 23:
                 
@@ -62,7 +63,7 @@ window.onload = function() {
                 break;
                 
             default:
-                if (date < 22) {
+                if (date < 23) {
                     window.location.href = "../index.html";
                     alert("Kviz je dostupan tek na pocetku konferencije.");
                 } else if (date > 25) {
