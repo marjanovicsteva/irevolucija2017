@@ -56,7 +56,7 @@ window.onload = function() {
                 break;
 
             default:
-                if (date < 23) {
+                 if (date < 23) {
                     window.location.href = "../index.html";
                     alert("Kviz je dostupan tek na pocetku konferencije.");
                 } else if (date > 25) {
