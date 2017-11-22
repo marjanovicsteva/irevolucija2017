@@ -44,6 +44,14 @@ if (localStorage.visited == 1) {
                     }, 1000);
                 }
             });
+
+            $(".objavi").click(function() {
+              if ($(this).hasClass("twttr")) {
+                $(this).attr("href", "https://twitter.com/intent/tweet?text=Moj rezultat sa kviza iRevolucije&hashtags=IR17");
+              } else if ($(this).hasClass("faceb")) {
+                $(this).attr("href", "https://www.facebook.com/v2.5/dialog/share?quote=Moj rezultat sa kviza iRevolucije&hashtag=IR17");
+              }
+            });
         } else {
             alert("Local Storage not supported by your browser. Please update it.");
         }
