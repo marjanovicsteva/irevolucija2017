@@ -3,9 +3,21 @@
     <head>
         <title>Quiz</title>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="URF-8">
+        <meta name="author" content="Nikola Trajkovic, Stevan Marjanovic">
+        <meta name="description" content="Oficijalna aplikacija za kviz na #IR17">
+        <meta name="keywords" content="Kviz, iRevolucija, #IR17, konferencija, Valjevo">
+
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../bootstrap-social.css">
+        <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
+
         <link rel="stylesheet" href="../style.css" type="text/css" />
 
         <script type="text/javascript" src="../jquery.min.js"></script>
+        <script type="text/javascript" src="../../popper.js"></script>
+        <script src="../../js/bootstrap.min.js" charset="utf-8"></script>
 
         <script type="text/javascript" src="../moment.js"></script>
         <script type="text/javascript" src="../app.js"></script>
@@ -123,7 +135,30 @@
                         <h4 class="card-title text-center">iRevolucija Quiz</h4>
                         <p>Va&#353; dana&#353;nji rezultat: <span id="score"></span></p>
                         <p>Va&#353; ukupni rezultat: <span id="ukupanScore"></span></p>
-                        <a href="../../index.html" class="btn btn-danger btn-block">Po&#269;etni ekran</a>
+                        <div class="container">
+                          <div class="row">
+                            <p>Snimite ekran (<em>screenshot</em>) i objavite ga na Twitter ili Facebook sa he&#353;tegom <code>#IR17</code></p>
+                            <div class="col-sm-6">
+                              <a class="objavi twttr btn btn-block btn-social btn-twitter" href="#" target="_blank">
+                                <span class="fa fa-twitter"></span>
+                                Objavi na Twitter
+                              </a>
+                            </div>
+
+                            <p>&nbsp;</p>
+
+                            <div class="col-sm-6">
+                              <a class="objavi faceb btn btn-block btn-social btn-facebook" href="#" target="_blank">
+                                <span class="fa fa-facebook"></span>
+                                Objavi na Facebook
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <p>&nbsp;</p>
+
+                        <a class="btn btn-danger btn-block" href="../../index.html" class="btn btn-danger btn-block">Po&#269;etni ekran</a>
                     </div>
                 </div>
             </div>

@@ -25,7 +25,6 @@ if (localStorage.visited == 1) {
                         localStorage.setItem("ukupnoPoena", ukupnoPoena);
                     } else {
                         $(this).siblings(".btn").prop("disabled", true);
-                        // $(this).siblings(".correct").addClass("btn-success");
                         $(this).prop("disabled", true);
                         $(this).addClass("btn-danger");
                     }
